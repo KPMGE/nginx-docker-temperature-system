@@ -1,0 +1,11 @@
+version: '3.9'
+
+services:
+  temperature-service: 
+    image: temperature-service
+    container_name: temperature-service
+    build: 
+      context: ./temperature-service
+    ports:
+      - 3333:3333
+    restart: on-failure
