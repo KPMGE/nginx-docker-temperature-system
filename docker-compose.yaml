@@ -9,3 +9,12 @@ services:
     ports:
       - 3333:3333
     restart: on-failure
+
+  preciptation-service: 
+    image: preciptation-service
+    container_name: preciptation-service
+    build: 
+      context: ./preciptation-service
+    ports:
+      - 3334:3334
+    restart: on-failure
