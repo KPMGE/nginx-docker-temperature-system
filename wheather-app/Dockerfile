@@ -6,10 +6,10 @@ COPY ./package.json /app/
 
 RUN yarn install
 
-COPY . .
+COPY . . 
 
-EXPOSE 3333
+EXPOSE 3000
 
 USER node
 
-CMD [ "yarn", "start"]
+CMD [ "yarn", "start" ]

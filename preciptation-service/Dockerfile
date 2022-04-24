@@ -8,4 +8,8 @@ RUN yarn install
 
 COPY . .
 
+EXPOSE 3334
+
+USER node
+
 CMD [ "yarn", "start"]
