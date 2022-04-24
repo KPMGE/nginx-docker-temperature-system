@@ -26,7 +26,7 @@ const getPreciptation = (temperature) => {
   }
 }
 
-app.get('/preciptation/:temperature', (request, response) => {
+app.get('/precipitation/:temperature', (request, response) => {
   const temperature = Number(request.params.temperature)
   return response.status(200).json(getPreciptation(temperature))
 })

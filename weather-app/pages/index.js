@@ -14,7 +14,7 @@ export default function Home() {
       const temperature = responseJson.temperature
       setTemperature(temperature)
 
-      response = await fetch(`preciptation-service/preciptation/${temperature}`)
+      response = await fetch(`precipitation-service/preciptation/${temperature}`)
       responseJson = await response.json()
       const type = responseJson.type
       const probability = responseJson.probability
