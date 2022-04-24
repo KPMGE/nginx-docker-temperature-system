@@ -1,6 +1,11 @@
 const express = require("express");
+const cors = require('cors')
 
 const app = express()
+
+app.use(cors({
+  origin: '*'
+}))
 
 const getPreciptationChance = () => {
   return Math.random() * 100
@@ -11,13 +16,13 @@ const getPreciptation = (temperature) => {
 
   if (isCold) {
     return {
-      "preciptationType": "snow",
-      "preciptationChange": getPreciptationChance()
+      "type": "snow",
+      "probability": getPreciptationChance()
     }
   }
   return {
-    "preciptationType": "storm",
-    "preciptationChange": getPreciptationChance()
+    "type": "storm",
+    "probability": getPreciptationChance()
   }
 }
 

@@ -1,6 +1,10 @@
 const express = require("express");
+const cors = require('cors')
 
 const app = express()
+app.use(cors({
+  origin: '*'
+}))
 
 const MAX_TEMPERATURE = 40
 const MIN_TEMPERATURE = -20
